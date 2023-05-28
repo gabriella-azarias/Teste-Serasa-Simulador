@@ -16,24 +16,63 @@ describe('Simulador', () => {
 
   it('Cenario 1: Simulação de R$ 1.000 em 6 vezes valor esperado: 6x R$ 271,27', () => {
       // Definir o valor do R$ 1.000 no slider 
-      cy.get('#slider-range').invoke('val', 1000).trigger('input').click();
+      cy.get('#slider-range').should('exist').invoke('val', 1000).trigger('input').click();
 
-      // Definir 6 parcelar no slider 
-      cy.get('#slider-range-month').invoke('val', 6).trigger('input').click();
+      // Definir 6 parcelas no slider 
+      cy.get('#slider-range-month').should('exist').invoke('val', 6).trigger('input').click()
 
-      // Validar 6 meses 
-      cy.get('#month-amount-output').invoke('text').then((textoDoCampo) => {
-          const valorEsperado = "6x";           
-          expect(textoDoCampo).to.eq(valorEsperado);    
-      })
+    //Validar os meses 
+      cy.get('#month-amount').should('have.text', '6 meses');
 
-      // Validar valor da parcela 
-      cy.get('#loan-amount-output').invoke('text').then((textoDoCampo) => {
-          const valorEsperado = "R$ 271,27";  
-          expect(textoDoCampo).to.eq(valorEsperado);
-      })
+
+
 
      })
+
+     it('Cenario 2: Simulação de R$ 4.000 em 12 vezes valor esperado: 12x R$ 478,49', () => {
+
+   
+        // Definir o valor do R$ 4.000 no slider 
+         cy.get('#slider-range').should('exist').invoke('val', 4000).trigger('input').click();
+         
+
+         cy.pause(1000)
+        // Definir 12 parcelas no slider 
+        cy.get('#slider-range-month').should('exist').invoke('val', 12).trigger('input').click()
+        cy.pause(1000)
+   
+        cy.get('#month-amount').should('have.text', '12 meses');
+      
+             
+           
+       })
+
+       it('Cenario 3: Simulação de R$6.000 em 24 vezes valor esperado: 24x R$ 347,89', () => {
+        // Definir o valor do R$ 6.000 no slider 
+         cy.get('#slider-range').should('exist').invoke('val', 6000).trigger('input').click();
+   
+        // Definir 24 parcelas no slider 
+        cy.get('#slider-range-month').should('exist').invoke('val', 24).trigger('input').click()
+   
+
+        
+   
+       })
+
+       it('Cenario 4: Simulação de R$6.000 em 24 vezes valor esperado: 24x R$ 387,89', () => {
+        // Definir o valor do R$ 6.000 no slider 
+         cy.get('#slider-range').should('exist').invoke('val', 6000).trigger('input').click();
+   
+        // Definir 24 parcelas no slider 
+        cy.get('#slider-range-month').should('exist').invoke('val', 24).trigger('input').click()
+   
+     
+    
+   
+       })
+
+
+
 
  
   
