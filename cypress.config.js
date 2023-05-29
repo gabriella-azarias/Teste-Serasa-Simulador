@@ -16,4 +16,7 @@ module.exports = defineConfig({
       return require('./cypress/plugins/index.js')(on, config)
     },
   },
+  env: {
+    SERASA_SIMULADOR_URL: 'https://www.serasa.com.br/ecred/simulador',
+  },
 })

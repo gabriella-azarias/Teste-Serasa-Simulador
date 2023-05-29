@@ -58,7 +58,7 @@ const selectors = {
   
   describe('Simulador', () => {
     beforeEach(() => {
-      cy.visit('https://www.serasa.com.br/ecred/simulador');
+      cy.visit(Cypress.env('SERASA_SIMULADOR_URL'));
     });
   
     it('Cenario 1: Simulação de R$ 1.000 em 6 vezes valor esperado: 6x R$ 271,27', () => {
