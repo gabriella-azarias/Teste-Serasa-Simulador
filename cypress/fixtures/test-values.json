@@ -1,0 +1,33 @@
+{
+  "minRangeValue": "0",
+  "scenario1": {
+    "amount": 1000,
+    "months": 6,
+    "expectedAmount": "R$ 1.000,00",
+    "expectedMonthAmount": "6 meses",
+    "expectedMonthAmountOutput": "6x",
+    "expectedPriceSign": "R$",
+    "expectedPriceNumber": "271,27"
+  },
+  "scenario2": {
+    "amount": 4000,
+    "months": 12,
+    "expectedAmount": "R$ 4.000,00",
+    "expectedMonthAmount": "12 meses",
+    "expectedMonthAmountOutput": "12x",
+    "expectedPriceSign": "R$",
+    "expectedPriceNumber": "478,49"
+  },
+  "scenario3": {
+    "amount": 6000,
+    "months": 24,
+    "expectedAmount": "R$ 6.000,00",
+    "expectedMonthAmount": "24 meses",
+    "expectedMonthAmountOutput": "24x",
+    "expectedPriceSign": "R$",
+    "expectedPriceNumber": "347,89"
+  },
+  "scenario4": {
+    "expectedPriceNumber": "387,89"
+  }
+}

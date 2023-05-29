@@ -1,0 +1,11 @@
+{
+  "selectors": {
+    "sliderRange": "#slider-range",
+    "sliderRangeMonth": "#slider-range-month",
+    "amount": "#amount",
+    "monthAmount": "#month-amount",
+    "monthAmountOutput": "#month-amount-output",
+    "priceSign": "#price-sign",
+    "priceNumber": "#price-number"
+  }
+}
